@@ -1,0 +1,15 @@
+  chronograf:
+    container_name: chronograf
+    image: chronograf:latest
+    restart: unless-stopped
+    volumes:
+      - ./volumes/chronograf/data/:/var/lib/chronograf
+    ports:
+      - 8888:8888
+    environment:
+      INFLUXDB_URL: http://192.168.1.180:8086
+      KAPACITOR_URL: http://192.168.1.180:9092
+    depends_on:
+      - influxdb
+      - telegraf
+      - kapacitor

@@ -1,0 +1,12 @@
+  kapacitor:
+    container_name: kapacitor
+    image: kapacitor
+    restart: unless-stopped
+    volumes:
+      - ./volumes/kapacitor/data/:/var/lib/kapacitor
+    ports:
+      - 9092:9092
+    env_file:
+      - ./services/kapacitor/kapacitor.env
+    depends_on:
+      - influxdb

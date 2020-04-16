@@ -8,6 +8,8 @@ declare -A cont_array=(
 	[nodered]="Node-RED"
 	[influxdb]="InfluxDB"
 	[telegraf]="Telegraf (Requires InfluxDB and Mosquitto)"
+	[kapacitor]="Kapacitor"
+	[chronograf]="Chronograf"
 	[grafana]="Grafana"
 	[mosquitto]="Eclipse-Mosquitto"
 	[postgres]="Postgres"
@@ -30,8 +32,8 @@ declare -A cont_array=(
 	[python]="Python 3"
 
 )
-declare -a armhf_keys=("portainer" "nodered" "influxdb" "grafana" "mosquitto" "telegraf" "mariadb" "postgres"
-	"adminer" "openhab" "zigbee2mqtt" "pihole" "plex" "tasmoadmin" "rtl_433" "espruinohub"
+declare -a armhf_keys=("portainer" "nodered" "influxdb" "grafana" "mosquitto" "telegraf" "kapacitor" "chronograf" 
+	"mariadb" "postgres" "adminer" "openhab" "zigbee2mqtt" "pihole" "plex" "tasmoadmin" "rtl_433" "espruinohub"
 	"motioneye" "webthings_gateway" "blynk_server" "nextcloud" "diyhue" "homebridge" "python")
 
 sys_arch=$(uname -m)
